@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6sgqli883mik"
-path="res://.godot/imported/atk20.png-ebd0ad98ccaeab587e9be5a2b7d61046.ctex"
+path="res://.godot/imported/atk20.png-387a70f7c1b5b09885ff91b2b89c0ca3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Yasuke Satoshi/atk2/atk20.png"
-dest_files=["res://.godot/imported/atk20.png-ebd0ad98ccaeab587e9be5a2b7d61046.ctex"]
+source_file="res://assets/Characters/Yasuke Satoshi/atk2/atk20.png"
+dest_files=["res://.godot/imported/atk20.png-387a70f7c1b5b09885ff91b2b89c0ca3.ctex"]
 
 [params]
 

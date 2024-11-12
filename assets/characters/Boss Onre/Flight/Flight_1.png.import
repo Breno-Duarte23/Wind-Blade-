@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfox2f4uhasib"
-path="res://.godot/imported/Flight_1.png-56b4dff11ed858003bb94856ae963be4.ctex"
+path="res://.godot/imported/Flight_1.png-65d703823ab8dd3729d58c2916e6b228.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Boss Onre/Flight/Flight_1.png"
-dest_files=["res://.godot/imported/Flight_1.png-56b4dff11ed858003bb94856ae963be4.ctex"]
+source_file="res://assets/Characters/Boss Onre/Flight/Flight_1.png"
+dest_files=["res://.godot/imported/Flight_1.png-65d703823ab8dd3729d58c2916e6b228.ctex"]
 
 [params]
 

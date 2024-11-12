@@ -139,6 +139,7 @@ editor_draw_limits = true
 position = Vector2(18, 0)
 scale = Vector2(1.15625, 1.12264)
 sprite_frames = SubResource("SpriteFrames_hm4lm")
-animation = &"jumping"
+animation = &"attack"
+frame_progress = 0.799073
 
 [node name="animator" type="AnimationPlayer" parent="."]

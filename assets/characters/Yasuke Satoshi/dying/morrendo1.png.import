@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3bptucdy4rwb"
-path="res://.godot/imported/morrendo1.png-49f543d7083a44277b96cef8dc0bc7ef.ctex"
+path="res://.godot/imported/morrendo1.png-228453de9779af7602395e34da87bf24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Yasuke Satoshi/dying/morrendo1.png"
-dest_files=["res://.godot/imported/morrendo1.png-49f543d7083a44277b96cef8dc0bc7ef.ctex"]
+source_file="res://assets/Characters/Yasuke Satoshi/dying/morrendo1.png"
+dest_files=["res://.godot/imported/morrendo1.png-228453de9779af7602395e34da87bf24.ctex"]
 
 [params]
 

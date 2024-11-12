@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn1cu4ooh7mr8"
-path="res://.godot/imported/Flight_4.png-dde024d76fd688692b3b24940657a0b7.ctex"
+path="res://.godot/imported/Flight_4.png-2b7948650fa66d2884db4bec05ce8b98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Boss Onre/Flight/Flight_4.png"
-dest_files=["res://.godot/imported/Flight_4.png-dde024d76fd688692b3b24940657a0b7.ctex"]
+source_file="res://assets/Characters/Boss Onre/Flight/Flight_4.png"
+dest_files=["res://.godot/imported/Flight_4.png-2b7948650fa66d2884db4bec05ce8b98.ctex"]
 
 [params]
 
