@@ -1,31 +1,31 @@
 [gd_scene load_steps=26 format=3 uid="uid://dh27pj8dcn8y7"]
 
 [ext_resource type="Script" path="res://scripts/Yasuke Satoshi.gd" id="1_s4oga"]
-[ext_resource type="Texture2D" uid="uid://b1a3t2rtl42bo" path="res://assets/characters/Yasuke Satoshi/atk1/atk10.png" id="2_4mly4"]
-[ext_resource type="Texture2D" uid="uid://d2qiawcxyfdb1" path="res://assets/characters/Yasuke Satoshi/atk1/atk11.png" id="3_mmwd7"]
-[ext_resource type="Texture2D" uid="uid://b1jm15iyhy1qk" path="res://assets/characters/Yasuke Satoshi/atk1/atk12.png" id="4_i6jm3"]
-[ext_resource type="Texture2D" uid="uid://dq0ftcvfefxoa" path="res://assets/characters/Yasuke Satoshi/atk1/atk13.png" id="5_ghss4"]
-[ext_resource type="Texture2D" uid="uid://begx3pvec2wrj" path="res://assets/characters/Yasuke Satoshi/atk1/atk14.png" id="6_duby5"]
-[ext_resource type="Texture2D" uid="uid://6jvq2hf6rhux" path="res://assets/characters/Yasuke Satoshi/atk1/atk15.png" id="7_51odp"]
-[ext_resource type="Texture2D" uid="uid://bthva2fet3r3t" path="res://assets/characters/Yasuke Satoshi/atk1/atk16.png" id="8_c2tpy"]
-[ext_resource type="Texture2D" uid="uid://duvl8gk34rx2k" path="res://assets/characters/Yasuke Satoshi/jumping/pulando0.png" id="9_1ypxf"]
-[ext_resource type="Texture2D" uid="uid://bfkq8cnwkrgt2" path="res://assets/characters/Yasuke Satoshi/jumping/pulando1.png" id="10_o8m0h"]
-[ext_resource type="Texture2D" uid="uid://g41u4xbp3f2y" path="res://assets/characters/Yasuke Satoshi/running/sprite_0.png" id="10_o8osm"]
-[ext_resource type="Texture2D" uid="uid://ctqu0llx0ople" path="res://assets/characters/Yasuke Satoshi/running/sprite_1.png" id="11_7s7my"]
-[ext_resource type="Texture2D" uid="uid://dtlbjnfcfhjol" path="res://assets/characters/Yasuke Satoshi/jumping/pulando2.png" id="11_dsrsc"]
-[ext_resource type="Texture2D" uid="uid://cgr6pctjxuglf" path="res://assets/characters/Yasuke Satoshi/jumping/pulando3.png" id="12_3fkdk"]
-[ext_resource type="Texture2D" uid="uid://cjn14we1ybo3o" path="res://assets/characters/Yasuke Satoshi/running/sprite_2.png" id="12_njhhy"]
-[ext_resource type="Texture2D" uid="uid://dfhpb0khehvbq" path="res://assets/characters/Yasuke Satoshi/jumping/pulando4.png" id="13_2oe41"]
-[ext_resource type="Texture2D" uid="uid://dkql0q1npscrl" path="res://assets/characters/Yasuke Satoshi/running/sprite_3.png" id="13_vs08c"]
-[ext_resource type="Texture2D" uid="uid://yq71hx4aw7de" path="res://assets/characters/Yasuke Satoshi/running/sprite_4.png" id="14_etvf8"]
-[ext_resource type="Texture2D" uid="uid://dxp3q14un35vg" path="res://assets/characters/Yasuke Satoshi/jumping/pulando5.png" id="14_pvj87"]
-[ext_resource type="Texture2D" uid="uid://br6r53kymeqyl" path="res://assets/characters/Yasuke Satoshi/jumping/pulando6.png" id="15_m1nr8"]
-[ext_resource type="Texture2D" uid="uid://d30nwoyefse68" path="res://assets/characters/Yasuke Satoshi/running/sprite_5.png" id="15_r7h0l"]
-[ext_resource type="Texture2D" uid="uid://cdu1m686edrwu" path="res://assets/characters/Yasuke Satoshi/running/sprite_6.png" id="16_xg6rc"]
-[ext_resource type="Texture2D" uid="uid://bcfesh6tvtpok" path="res://assets/characters/Yasuke Satoshi/running/sprite_7.png" id="17_8jxsy"]
+[ext_resource type="Texture2D" uid="uid://b1a3t2rtl42bo" path="res://assets/Characters/Yasuke Satoshi/atk1/atk10.png" id="2_4mly4"]
+[ext_resource type="Texture2D" uid="uid://d2qiawcxyfdb1" path="res://assets/Characters/Yasuke Satoshi/atk1/atk11.png" id="3_mmwd7"]
+[ext_resource type="Texture2D" uid="uid://b1jm15iyhy1qk" path="res://assets/Characters/Yasuke Satoshi/atk1/atk12.png" id="4_i6jm3"]
+[ext_resource type="Texture2D" uid="uid://dq0ftcvfefxoa" path="res://assets/Characters/Yasuke Satoshi/atk1/atk13.png" id="5_ghss4"]
+[ext_resource type="Texture2D" uid="uid://begx3pvec2wrj" path="res://assets/Characters/Yasuke Satoshi/atk1/atk14.png" id="6_duby5"]
+[ext_resource type="Texture2D" uid="uid://6jvq2hf6rhux" path="res://assets/Characters/Yasuke Satoshi/atk1/atk15.png" id="7_51odp"]
+[ext_resource type="Texture2D" uid="uid://bthva2fet3r3t" path="res://assets/Characters/Yasuke Satoshi/atk1/atk16.png" id="8_c2tpy"]
+[ext_resource type="Texture2D" uid="uid://duvl8gk34rx2k" path="res://assets/Characters/Yasuke Satoshi/jumping/pulando0.png" id="9_1ypxf"]
+[ext_resource type="Texture2D" uid="uid://bfkq8cnwkrgt2" path="res://assets/Characters/Yasuke Satoshi/jumping/pulando1.png" id="10_o8m0h"]
+[ext_resource type="Texture2D" uid="uid://g41u4xbp3f2y" path="res://assets/Characters/Yasuke Satoshi/running/sprite_0.png" id="10_o8osm"]
+[ext_resource type="Texture2D" uid="uid://ctqu0llx0ople" path="res://assets/Characters/Yasuke Satoshi/running/sprite_1.png" id="11_7s7my"]
+[ext_resource type="Texture2D" uid="uid://dtlbjnfcfhjol" path="res://assets/Characters/Yasuke Satoshi/jumping/pulando2.png" id="11_dsrsc"]
+[ext_resource type="Texture2D" uid="uid://cgr6pctjxuglf" path="res://assets/Characters/Yasuke Satoshi/jumping/pulando3.png" id="12_3fkdk"]
+[ext_resource type="Texture2D" uid="uid://cjn14we1ybo3o" path="res://assets/Characters/Yasuke Satoshi/running/sprite_2.png" id="12_njhhy"]
+[ext_resource type="Texture2D" uid="uid://dfhpb0khehvbq" path="res://assets/Characters/Yasuke Satoshi/jumping/pulando4.png" id="13_2oe41"]
+[ext_resource type="Texture2D" uid="uid://dkql0q1npscrl" path="res://assets/Characters/Yasuke Satoshi/running/sprite_3.png" id="13_vs08c"]
+[ext_resource type="Texture2D" uid="uid://yq71hx4aw7de" path="res://assets/Characters/Yasuke Satoshi/running/sprite_4.png" id="14_etvf8"]
+[ext_resource type="Texture2D" uid="uid://dxp3q14un35vg" path="res://assets/Characters/Yasuke Satoshi/jumping/pulando5.png" id="14_pvj87"]
+[ext_resource type="Texture2D" uid="uid://br6r53kymeqyl" path="res://assets/Characters/Yasuke Satoshi/jumping/pulando6.png" id="15_m1nr8"]
+[ext_resource type="Texture2D" uid="uid://d30nwoyefse68" path="res://assets/Characters/Yasuke Satoshi/running/sprite_5.png" id="15_r7h0l"]
+[ext_resource type="Texture2D" uid="uid://cdu1m686edrwu" path="res://assets/Characters/Yasuke Satoshi/running/sprite_6.png" id="16_xg6rc"]
+[ext_resource type="Texture2D" uid="uid://bcfesh6tvtpok" path="res://assets/Characters/Yasuke Satoshi/running/sprite_7.png" id="17_8jxsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6diub"]
-size = Vector2(11, 36)
+size = Vector2(11, 37)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hm4lm"]
 animations = [{
@@ -124,22 +124,21 @@ position = Vector2(0, -19)
 script = ExtResource("1_s4oga")
 
 [node name="colision" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 1)
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_6diub")
 
 [node name="camera" type="Camera2D" parent="."]
 visible = false
-zoom = Vector2(1.2, 1.2)
+zoom = Vector2(1.5, 1.5)
 limit_left = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
-position = Vector2(18, 0)
+position = Vector2(5, 0)
 scale = Vector2(1.15625, 1.12264)
 sprite_frames = SubResource("SpriteFrames_hm4lm")
 animation = &"attack"
-frame_progress = 0.799073
 
 [node name="animator" type="AnimationPlayer" parent="."]
