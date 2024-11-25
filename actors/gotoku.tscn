@@ -1,0 +1,130 @@
+[gd_scene load_steps=23 format=3 uid="uid://b8twnkp6f8ieo"]
+
+[ext_resource type="Script" path="res://scripts/gotoku.gd" id="1_b5jl3"]
+[ext_resource type="Texture2D" uid="uid://dqhsa8lyltpgt" path="res://assets/Characters/Gotoku/Ataque 1/Gotoku_0.png" id="1_yixxg"]
+[ext_resource type="Texture2D" uid="uid://dfif3ygw32omu" path="res://assets/Characters/Gotoku/Ataque 1/Gotoku_1.png" id="2_gyxhb"]
+[ext_resource type="Texture2D" uid="uid://cy8hxrvpnwiv0" path="res://assets/Characters/Gotoku/Ataque 1/gotoku_2.png" id="3_2m5x6"]
+[ext_resource type="Texture2D" uid="uid://ccinf0053c6al" path="res://assets/Characters/Gotoku/Morte/Morte0.png" id="4_lh7qn"]
+[ext_resource type="Texture2D" uid="uid://tmnvcavprt1r" path="res://assets/Characters/Gotoku/Morte/morte1.png" id="5_pxn73"]
+[ext_resource type="Texture2D" uid="uid://d4lacsrrnv87u" path="res://assets/Characters/Gotoku/Morte/morte2.png" id="6_a5owh"]
+[ext_resource type="Texture2D" uid="uid://g0r5xmnvtsx5" path="res://assets/Characters/Gotoku/Morte/morte3.png" id="7_vqgcn"]
+[ext_resource type="Texture2D" uid="uid://f3kbuwl4yr1l" path="res://assets/Characters/Gotoku/Correndo/correr 0.png" id="8_xrqo1"]
+[ext_resource type="Texture2D" uid="uid://iege3rsv5kki" path="res://assets/Characters/Gotoku/Correndo/correr 1.png" id="9_eveuv"]
+[ext_resource type="Texture2D" uid="uid://c53kytcqhnqbe" path="res://assets/Characters/Gotoku/Correndo/correr 3.png" id="10_8go24"]
+[ext_resource type="Texture2D" uid="uid://bofi0j78a5p8l" path="res://assets/Characters/Gotoku/Correndo/correr 4.png" id="11_hjus3"]
+[ext_resource type="Texture2D" uid="uid://kp3m6qm88wku" path="res://assets/Characters/Gotoku/Correndo/correr 5.png" id="12_ly6fw"]
+[ext_resource type="Texture2D" uid="uid://ddta6pfrc0wvi" path="res://assets/Characters/Gotoku/Correndo/correr 6.png" id="13_gu42u"]
+[ext_resource type="Texture2D" uid="uid://caompu4o4e5oq" path="res://assets/Characters/Gotoku/Andando/andando 0.png" id="14_1tqnn"]
+[ext_resource type="Texture2D" uid="uid://brmpfc2tgbmdd" path="res://assets/Characters/Gotoku/Andando/andando 1.png" id="15_511i8"]
+[ext_resource type="Texture2D" uid="uid://bwx812chf6lry" path="res://assets/Characters/Gotoku/Andando/andando 2.png" id="16_sh6j3"]
+[ext_resource type="Texture2D" uid="uid://dfvmaybekhpaw" path="res://assets/Characters/Gotoku/Andando/andando 3.png" id="17_k76ri"]
+[ext_resource type="Texture2D" uid="uid://mqrno48dwken" path="res://assets/Characters/Gotoku/Andando/andando 4.png" id="18_4k3xk"]
+[ext_resource type="Texture2D" uid="uid://bmdro0nj4adls" path="res://assets/Characters/Gotoku/Andando/andando 5.png" id="19_s7iw6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxptd"]
+size = Vector2(14, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wu2rb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yixxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gyxhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2m5x6")
+}],
+"loop": true,
+"name": &"attacking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lh7qn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pxn73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a5owh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vqgcn")
+}],
+"loop": true,
+"name": &"dying",
+"speed": 6.97
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xrqo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_eveuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8go24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hjus3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ly6fw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gu42u")
+}],
+"loop": true,
+"name": &"running",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_1tqnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_511i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_sh6j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_k76ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4k3xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_s7iw6")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 6.0
+}]
+
+[node name="gotoku" type="CharacterBody2D" groups=["Enemies"]]
+light_mask = 8
+visibility_layer = 2
+collision_layer = 4
+collision_mask = 22
+script = ExtResource("1_b5jl3")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -22)
+shape = SubResource("RectangleShape2D_yxptd")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.500001, -21.2468)
+scale = Vector2(0.390625, 0.47342)
+sprite_frames = SubResource("SpriteFrames_wu2rb")
+animation = &"walking"
+autoplay = "walking"
+frame_progress = 0.32043
+flip_h = true
+
+[node name="wall_detector" type="RayCast2D" parent="."]
+position = Vector2(0, -23)
+target_position = Vector2(8, 0)
+collision_mask = 6
