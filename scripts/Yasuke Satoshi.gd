@@ -49,7 +49,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			animation.play("idle")
 		
-		# Parar o som de corrida se o personagem estiver parado ou pulando
+		# Parar o som da corrida 
+		# se o personagem estiver parado ou pulando
 		if running_sfx.playing:
 			running_sfx.stop()
 
