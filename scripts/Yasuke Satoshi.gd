@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 const SPEED = 208.0
 const JUMP_VELOCITY = -388.0
 var is_jumping := false
@@ -14,7 +15,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Controle de pulo
+
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		is_jumping = true
@@ -26,20 +27,12 @@ func _physics_process(delta: float) -> void:
 
 	elif is_on_floor():
 		is_jumping = false
-		jump_sound_played = false  # Permitir o som no próximo pulo
 
-	# Obter direção do movimento e controlar aceleração/desaceleração
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
 		animation.scale.x = direction
-		
-		if is_on_floor():
-			animation.play("running")
-			
-			# Tocar o som de corrida apenas se não estiver tocando
-			if not running_sfx.playing:
-				running_sfx.play()
+
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
@@ -55,3 +48,19 @@ func _physics_process(delta: float) -> void:
 			running_sfx.stop()
 
 	move_and_slide()
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	print("Colisão do ataque")
+	if body.is_in_group("enemies"):
+		body.anim.play("dying")
+
+
+func _on_mob_detector_body_entered(body: Node2D) -> void:
+	animation.play("dying")
+	die()
+
+func die():
+	hit.emit()
+	print("morto")
+	queue_free()
+	
