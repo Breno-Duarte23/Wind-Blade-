@@ -21,6 +21,10 @@ window/size/viewport_width=720
 window/size/viewport_height=480
 window/stretch/mode="viewport"
 
+[global_group]
+
+Enemies=""
+
 [layer_names]
 
 2d_physics/layer_1="player"
