@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkql0q1npscrl"
-path="res://.godot/imported/sprite_3.png-49bff88d4595107d37f245a888fee50f.ctex"
+path="res://.godot/imported/sprite_3.png-f6ff0a2fd9845d1e60a800b174826146.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Yasuke Satoshi/running/sprite_3.png"
-dest_files=["res://.godot/imported/sprite_3.png-49bff88d4595107d37f245a888fee50f.ctex"]
+source_file="res://assets/characters/Yasuke Satoshi/running/sprite_3.png"
+dest_files=["res://.godot/imported/sprite_3.png-f6ff0a2fd9845d1e60a800b174826146.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://br2iofbr2gum4"]
+[gd_scene load_steps=16 format=3 uid="uid://br2iofbr2gum4"]
 
 [ext_resource type="Texture2D" uid="uid://8trh6ju1qws7" path="res://assets/World Elements/Legacy Adventure Pack - Garden/Assets/Assets.png" id="1_cs4lt"]
 [ext_resource type="PackedScene" uid="uid://dh27pj8dcn8y7" path="res://actors/player.tscn" id="2_3pwbd"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://5ckhreiynskf" path="res://assets/World Elements/Background/m1/3.png" id="5_vboyf"]
 [ext_resource type="Texture2D" uid="uid://c2lnimiewgduy" path="res://assets/World Elements/Background/m1/4.png" id="6_lbwc7"]
 [ext_resource type="Texture2D" uid="uid://ckvfigceo63nv" path="res://assets/World Elements/Background/m1/5.png" id="7_lx1l3"]
+[ext_resource type="AudioStream" uid="uid://c16tip3ukq6wy" path="res://sounds/bg_music.mp3" id="8_nq2av"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_7qivm"]
 tile_data = PackedInt32Array(0, 720896, 6, 65536, 720896, 7, 1, 589824, 6, 65537, 589824, 7)
@@ -257,3 +258,8 @@ position = Vector2(-1, 3)
 scale = Vector2(1.21007, 1.39506)
 texture = ExtResource("7_lx1l3")
 centered = false
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_nq2av")
+volume_db = -38.0
+autoplay = true

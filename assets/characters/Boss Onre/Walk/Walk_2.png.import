@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dls5ahj6fpkw7"
-path="res://.godot/imported/Walk_2.png-7214bfe4b2b1a8b16b8e7bf6f57756ea.ctex"
+path="res://.godot/imported/Walk_2.png-228a97e9ac2f8b04c1a7cb665283f0a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Boss Onre/Walk/Walk_2.png"
-dest_files=["res://.godot/imported/Walk_2.png-7214bfe4b2b1a8b16b8e7bf6f57756ea.ctex"]
+source_file="res://assets/characters/Boss Onre/Walk/Walk_2.png"
+dest_files=["res://.godot/imported/Walk_2.png-228a97e9ac2f8b04c1a7cb665283f0a1.ctex"]
 
 [params]
 

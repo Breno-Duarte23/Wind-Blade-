@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqa3ednp756s8"
-path="res://.godot/imported/pulo 3.png-5ba8b819a67894e3aa389c0d94e67d9e.ctex"
+path="res://.godot/imported/pulo 3.png-81b2e894861a52991349753b1c72cd7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Gotoku/Pulo/pulo 3.png"
-dest_files=["res://.godot/imported/pulo 3.png-5ba8b819a67894e3aa389c0d94e67d9e.ctex"]
+source_file="res://assets/characters/Gotoku/Pulo/pulo 3.png"
+dest_files=["res://.godot/imported/pulo 3.png-81b2e894861a52991349753b1c72cd7d.ctex"]
 
 [params]
 

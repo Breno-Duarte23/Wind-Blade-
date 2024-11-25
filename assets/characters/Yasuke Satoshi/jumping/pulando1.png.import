@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfkq8cnwkrgt2"
-path="res://.godot/imported/pulando1.png-288f286ed8c9a565ec1912f092de46a6.ctex"
+path="res://.godot/imported/pulando1.png-aa68b028129776571efb08d9fa1a6eac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Yasuke Satoshi/jumping/pulando1.png"
-dest_files=["res://.godot/imported/pulando1.png-288f286ed8c9a565ec1912f092de46a6.ctex"]
+source_file="res://assets/characters/Yasuke Satoshi/jumping/pulando1.png"
+dest_files=["res://.godot/imported/pulando1.png-aa68b028129776571efb08d9fa1a6eac.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwx812chf6lry"
-path="res://.godot/imported/andando 2.png-a330fb77e77e8eb4bd0a6605b158a3cc.ctex"
+path="res://.godot/imported/andando 2.png-690c87aaa6bcf45f5d02910d99135f81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Gotoku/Andando/andando 2.png"
-dest_files=["res://.godot/imported/andando 2.png-a330fb77e77e8eb4bd0a6605b158a3cc.ctex"]
+source_file="res://assets/characters/Gotoku/Andando/andando 2.png"
+dest_files=["res://.godot/imported/andando 2.png-690c87aaa6bcf45f5d02910d99135f81.ctex"]
 
 [params]
 
