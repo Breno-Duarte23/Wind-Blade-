@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bmdro0nj4adls" path="res://assets/Characters/Gotoku/Andando/andando 5.png" id="19_s7iw6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxptd"]
-size = Vector2(16, 42)
+size = Vector2(14, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wu2rb"]
 animations = [{
@@ -104,25 +104,27 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="enemy" type="CharacterBody2D"]
+[node name="gotoku" type="CharacterBody2D" groups=["Enemies"]]
 light_mask = 8
 visibility_layer = 2
-collision_mask = 2
+collision_layer = 4
+collision_mask = 22
 script = ExtResource("1_b5jl3")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(2, -23)
+position = Vector2(0, -22)
 shape = SubResource("RectangleShape2D_yxptd")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -24)
-scale = Vector2(0.441406, 0.588356)
+position = Vector2(0.500001, -21.2468)
+scale = Vector2(0.390625, 0.47342)
 sprite_frames = SubResource("SpriteFrames_wu2rb")
 animation = &"walking"
 autoplay = "walking"
-frame_progress = 0.789386
+frame_progress = 0.32043
+flip_h = true
 
 [node name="wall_detector" type="RayCast2D" parent="."]
 position = Vector2(0, -23)
-target_position = Vector2(7, 0)
+target_position = Vector2(8, 0)
 collision_mask = 6
