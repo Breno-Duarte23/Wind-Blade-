@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dh27pj8dcn8y7"]
+[gd_scene load_steps=27 format=3 uid="uid://dh27pj8dcn8y7"]
 
 [ext_resource type="Script" path="res://scripts/Yasuke Satoshi.gd" id="1_s4oga"]
 [ext_resource type="Texture2D" uid="uid://b1a3t2rtl42bo" path="res://assets/Characters/Yasuke Satoshi/atk1/atk10.png" id="2_4mly4"]
@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bcfesh6tvtpok" path="res://assets/Characters/Yasuke Satoshi/running/sprite_7.png" id="17_8jxsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6diub"]
-size = Vector2(11, 37)
+size = Vector2(13, 33)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hm4lm"]
 animations = [{
@@ -119,26 +119,43 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3d72k"]
+size = Vector2(8, 30)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(0, -19)
+collision_mask = 10
 script = ExtResource("1_s4oga")
 
 [node name="colision" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 1.5)
+physics_interpolation_mode = 1
+position = Vector2(-3.5, -0.5)
 shape = SubResource("RectangleShape2D_6diub")
 
 [node name="camera" type="Camera2D" parent="."]
 visible = false
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.7, 1.7)
 limit_left = 0
+limit_bottom = 300
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
-position = Vector2(5, 0)
-scale = Vector2(1.15625, 1.12264)
+visibility_layer = 10
+position = Vector2(10, -1)
+scale = Vector2(0.90625, 0.951945)
 sprite_frames = SubResource("SpriteFrames_hm4lm")
 animation = &"attack"
+frame_progress = 0.845492
 
 [node name="animator" type="AnimationPlayer" parent="."]
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(10, -3)
+shape = SubResource("RectangleShape2D_3d72k")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

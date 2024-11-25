@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://dqqdlt8ag8lqr"]
+
+[ext_resource type="Texture2D" uid="uid://b7ewysih3p26x" path="res://assets/MiniFX, Items & UI/collectibles/Sushi_Variety (16 x 16).png" id="1_2ug3i"]
+[ext_resource type="Script" path="res://scripts/sushi.gd" id="1_d3rge"]
+[ext_resource type="Texture2D" uid="uid://c2eoe4gger6ag" path="res://assets/MiniFX, Items & UI/Effects/Cloud_Poof (16 x 16).png" id="2_lr0tt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm3gg"]
+atlas = ExtResource("2_lr0tt")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxqr2"]
+atlas = ExtResource("2_lr0tt")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2itv"]
+atlas = ExtResource("2_lr0tt")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jlpn"]
+atlas = ExtResource("2_lr0tt")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kakwk"]
+atlas = ExtResource("1_2ug3i")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a0ykt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bm3gg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxqr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2itv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jlpn")
+}],
+"loop": false,
+"name": &"collect",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kakwk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_67jv1"]
+radius = 8.0
+
+[node name="Sushi" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_d3rge")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+light_mask = 8
+sprite_frames = SubResource("SpriteFrames_a0ykt")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="colision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_67jv1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
