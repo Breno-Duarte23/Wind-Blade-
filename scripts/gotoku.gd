@@ -3,17 +3,19 @@ extends CharacterBody2D
 const SPEED = 50.0
 const JUMP_VELOCITY = -400.0
 @onready var wall_detector := $wall_detector as RayCast2D
-@onready var texture := $anim as Sprite2D
+@onready var texture := $anim as AnimatedSprite2D
 
 var direction = 1
 
 func die():
+	direction = 0
 	texture.play("dying")
-	await get_tree().create_timer(0.5).timeout  # Espera o timeout do timer
+	await get_tree().create_timer(0.3).timeout  # Espera o timeout do timer
 	get_node("collision").set_deferred("disabled", true)
 	queue_free()
 	
 func _on_anim_animation_finished(anim_name: String) -> void:
+	print("Colisão do ataque")
 	if anim_name == "dying":
 		die()
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kp3m6qm88wku"
-path="res://.godot/imported/correr 5.png-bd4187c3f9cfc4d43fe56205e7927f0a.ctex"
+path="res://.godot/imported/correr 5.png-c71c859e9ffc56308a6cac0219082cae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Gotoku/Correndo/correr 5.png"
-dest_files=["res://.godot/imported/correr 5.png-bd4187c3f9cfc4d43fe56205e7927f0a.ctex"]
+source_file="res://assets/characters/Gotoku/Correndo/correr 5.png"
+dest_files=["res://.godot/imported/correr 5.png-c71c859e9ffc56308a6cac0219082cae.ctex"]
 
 [params]
 

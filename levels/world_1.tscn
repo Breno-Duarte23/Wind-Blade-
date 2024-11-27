@@ -178,7 +178,7 @@ pattern_2 = SubResource("TileMapPattern_7ij3k")
 pattern_3 = SubResource("TileMapPattern_7kx05")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_50w6j"]
-size = Vector2(11.625, 275.313)
+size = Vector2(25.5, 232.328)
 
 [node name="World1" type="Node2D"]
 
@@ -207,7 +207,15 @@ position = Vector2(-34, 1)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(26, 66)
+position = Vector2(2454.25, -74.1641)
+shape = SubResource("RectangleShape2D_50w6j")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-34, 1)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(22, 44.6718)
 shape = SubResource("RectangleShape2D_50w6j")
 
 [node name="BG" type="ParallaxBackground" parent="."]
@@ -251,7 +259,7 @@ motion_mirroring = Vector2(691, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/02"]
 position = Vector2(8, 0)
-scale = Vector2(1.20139, 1.27469)
+scale = Vector2(1.19965, 1.27161)
 texture = ExtResource("6_lbwc7")
 centered = false
 

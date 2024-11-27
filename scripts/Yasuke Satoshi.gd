@@ -4,46 +4,67 @@ signal hit
 const SPEED = 208.0
 const JUMP_VELOCITY = -388.0
 var is_jumping := false
+var jump_sound_played := false
+
 @onready var animation := $anim as AnimatedSprite2D
+@onready var running_sfx = $running_sfx as AudioStreamPlayer
+@onready var jumping_sfx = $jumping_sfx as AudioStreamPlayer
+@onready var collision_hit = $collision_hit as CollisionShape2D
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	# Adiciona a gravidade
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
+	# Controle de ataque
 	if Input.is_action_just_pressed("ui_accept"):
 		print("Ataque")
 		animation.play("attack")
 
-	# Handle jump.
+	# Controle de pulo
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		is_jumping = true
+
+		# Tocar o som do pulo apenas uma vez por salto
+		if not jump_sound_played:
+			jumping_sfx.play()
+			jump_sound_played = true
 	elif is_on_floor():
 		is_jumping = false
+		jump_sound_played = false  # Permitir o som no próximo pulo
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Obter direção do movimento e controlar aceleração/desaceleração
 	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
+	if direction != 0:
 		velocity.x = direction * SPEED
 		animation.scale.x = direction
 
 		if is_on_floor():
 			animation.play("running")
-	elif is_jumping:
-		animation.play("jumping")
+
+			# Tocar o som de corrida apenas se não estiver tocando
+			if not running_sfx.playing:
+				running_sfx.play()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		animation.play("idle")
+
+		# Estado idle ou durante o pulo
+		if is_jumping:
+			animation.play("jumping")
+		else:
+			animation.play("idle")
+
+		# Parar o som da corrida se o personagem estiver parado ou pulando
+		if running_sfx.playing:
+			running_sfx.stop()
 
 	move_and_slide()
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
-	print("Colisão do ataque")
-	if body.is_in_group("enemies"):
-		body.anim.play("dying")
-
+	if body.is_in_group("Enemies"):
+		body.texture.play("dying")
+		body.die()
 
 func _on_mob_detector_body_entered(body: Node2D) -> void:
 	animation.play("dying")
@@ -53,4 +74,3 @@ func die():
 	hit.emit()
 	print("morto")
 	queue_free()
-	

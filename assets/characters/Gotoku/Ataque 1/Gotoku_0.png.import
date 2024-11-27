@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqhsa8lyltpgt"
-path="res://.godot/imported/Gotoku_0.png-67b845bcb78fda940a501e330b578f65.ctex"
+path="res://.godot/imported/Gotoku_0.png-b3526e106bae68b80ed7e00774cb05ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Gotoku/Ataque 1/Gotoku_0.png"
-dest_files=["res://.godot/imported/Gotoku_0.png-67b845bcb78fda940a501e330b578f65.ctex"]
+source_file="res://assets/characters/Gotoku/Ataque 1/Gotoku_0.png"
+dest_files=["res://.godot/imported/Gotoku_0.png-b3526e106bae68b80ed7e00774cb05ca.ctex"]
 
 [params]
 
