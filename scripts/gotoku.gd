@@ -9,6 +9,8 @@ var direction = 1
 
 func die():
 	direction = 0
+	self.collision_layer = 0
+	self.collision_layer = 0
 	texture.play("dying")
 	await get_tree().create_timer(0.3).timeout  # Espera o timeout do timer
 	get_node("collision").set_deferred("disabled", true)

@@ -36,13 +36,13 @@
 [ext_resource type="AudioStream" uid="uid://w601cq8tgmub" path="res://sounds/running_sfx.mp3" id="34_k0rtr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3d72k"]
-size = Vector2(12, 33)
+size = Vector2(30.5, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fo3c"]
-size = Vector2(18, 36)
+size = Vector2(23, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6diub"]
-size = Vector2(18, 41)
+size = Vector2(21, 76)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hm4lm"]
 animations = [{
@@ -100,7 +100,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("17_lbxy3")
 }],
-"loop": true,
+"loop": false,
 "name": &"dying",
 "speed": 5.0
 }, {
@@ -169,7 +169,6 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(0, -19)
 collision_mask = 10
 script = ExtResource("1_s4oga")
 
@@ -178,8 +177,17 @@ collision_layer = 16
 collision_mask = 20
 monitorable = false
 
-[node name="collision_hit" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(60, -27.5)
+[node name="collision_hit_right" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(74.75, -34)
+shape = SubResource("RectangleShape2D_3d72k")
+
+[node name="hitbox2" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 20
+monitorable = false
+
+[node name="collision_hit_left" type="CollisionShape2D" parent="hitbox2"]
+position = Vector2(33.5, -34.5)
 shape = SubResource("RectangleShape2D_3d72k")
 
 [node name="MobDetector" type="Area2D" parent="."]
@@ -187,16 +195,17 @@ collision_mask = 4
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MobDetector"]
-position = Vector2(38, -17)
+position = Vector2(55.5, -21)
 shape = SubResource("RectangleShape2D_0fo3c")
 
 [node name="colision" type="CollisionShape2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(38, -17.5)
+position = Vector2(55.5, -31)
 shape = SubResource("RectangleShape2D_6diub")
 
 [node name="camera" type="Camera2D" parent="."]
 visible = false
+zoom = Vector2(1.2, 1.2)
 limit_left = 0
 limit_bottom = 300
 limit_smoothed = true
@@ -205,11 +214,12 @@ editor_draw_limits = true
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 visibility_layer = 10
-position = Vector2(43, -20)
-scale = Vector2(1.13119, 1.35676)
+position = Vector2(54, -25)
+scale = Vector2(1.87793, 1.70671)
 sprite_frames = SubResource("SpriteFrames_hm4lm")
-animation = &"attack"
-frame_progress = 0.272419
+animation = &"dying"
+frame = 8
+frame_progress = 1.0
 
 [node name="jumping_sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("33_msowk")
@@ -217,7 +227,18 @@ stream = ExtResource("33_msowk")
 [node name="running_sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("34_k0rtr")
 
+[node name="attack_timer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
+[node name="dying_timer" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="body_entered" from="hitbox2" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="hitbox2" to="." method="_on_hitbox_body_exited"]
 [connection signal="body_entered" from="MobDetector" to="." method="_on_mob_detector_body_entered"]
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
+[connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="dying_timer" to="." method="_on_dying_timer_timeout"]
