@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Controle de ataque
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		attack()
 
 	# Controle de pulo
@@ -59,7 +59,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 		animation.scale.x = direction
 		
-		if animation.animation != "jumping" and is_attacking != true:
+		if is_on_floor() and is_attacking != true:
 			animation.play("running")
 			# Tocar o som de corrida apenas se não estiver tocando
 			if not running_sfx.playing:
@@ -101,6 +101,10 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 func get_look_direction() -> String:
 	return "right" if animation.scale.x > 0 else "left"
 
+func _on_attack_timer_timeout() -> void:
+	collision_hit_right.disabled = true
+	collision_hit_left.disabled = true
+	is_attacking = false # Permite que outras animações sejam executadas
 
 #Funções de interação de morte do jogador
 func _on_mob_detector_body_entered(body: Node2D) -> void:
@@ -112,12 +116,7 @@ func die():
 	hit.emit()
 	print("morto")
 	queue_free()
-
-func _on_attack_timer_timeout() -> void:
-	collision_hit_right.disabled = true
-	collision_hit_left.disabled = true
-	is_attacking = false # Permite que outras animações sejam executadas
-
+	get_tree().change_scene_to_file("res://prefabs/death_screen.tscn")
 
 func _on_dying_timer_timeout() -> void:
 	die()
