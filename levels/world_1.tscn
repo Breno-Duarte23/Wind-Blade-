@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://br2iofbr2gum4"]
+[gd_scene load_steps=18 format=3 uid="uid://br2iofbr2gum4"]
 
 [ext_resource type="Texture2D" uid="uid://8trh6ju1qws7" path="res://assets/World Elements/Legacy Adventure Pack - Garden/Assets/Assets.png" id="1_cs4lt"]
 [ext_resource type="PackedScene" uid="uid://dqqdlt8ag8lqr" path="res://prefabs/sushi.tscn" id="1_efb7m"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c2lnimiewgduy" path="res://assets/World Elements/Background/m1/4.png" id="6_lbwc7"]
 [ext_resource type="Texture2D" uid="uid://ckvfigceo63nv" path="res://assets/World Elements/Background/m1/5.png" id="7_lx1l3"]
 [ext_resource type="PackedScene" uid="uid://b8twnkp6f8ieo" path="res://actors/gotoku.tscn" id="9_2wvn6"]
+[ext_resource type="AudioStream" uid="uid://c16tip3ukq6wy" path="res://sounds/bg_music.mp3" id="10_jw55g"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_7qivm"]
 tile_data = PackedInt32Array(0, 720896, 6, 65536, 720896, 7, 1, 589824, 6, 65537, 589824, 7)
@@ -273,3 +274,7 @@ position = Vector2(0, 3)
 scale = Vector2(1.20313, 1.38889)
 texture = ExtResource("7_lx1l3")
 centered = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_jw55g")
+autoplay = true
