@@ -18,6 +18,7 @@ var jump_sound_played := false
 @onready var collision_hit_left := $hitbox2/collision_hit_left as CollisionShape2D
 @onready var attack_timer := $attack_timer as Timer
 var is_attacking := false
+
 func _ready() -> void:
 	collision_hit_right.disabled = true
 	collision_hit_left.disabled = true

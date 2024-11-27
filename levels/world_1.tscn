@@ -193,16 +193,28 @@ layer_0/tile_data = PackedInt32Array(524288, 524288, 5, 589824, 0, 2, 524289, 58
 
 [node name="enemies" type="Node2D" parent="."]
 
-[node name="enemy" parent="enemies" instance=ExtResource("9_2wvn6")]
-position = Vector2(369, 114)
+[node name="CharacterBody2D" parent="enemies" instance=ExtResource("2_3pwbd")]
+position = Vector2(-1, -19)
+
+[node name="gotoku" parent="enemies" instance=ExtResource("9_2wvn6")]
+position = Vector2(330, 52)
+
+[node name="gotoku2" parent="enemies" instance=ExtResource("9_2wvn6")]
+position = Vector2(956, 151)
+
+[node name="gotoku3" parent="enemies" instance=ExtResource("9_2wvn6")]
+position = Vector2(2357, -36)
+
+[node name="gotoku4" parent="enemies" instance=ExtResource("9_2wvn6")]
+position = Vector2(2743, -33)
+
+[node name="gotoku5" parent="enemies" instance=ExtResource("9_2wvn6")]
+position = Vector2(1932, -26)
 
 [node name="Sushis" type="Node2D" parent="."]
 
 [node name="Sushi" parent="Sushis" instance=ExtResource("1_efb7m")]
 position = Vector2(179, 108)
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_3pwbd")]
-position = Vector2(-1, -19)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-34, 1)
