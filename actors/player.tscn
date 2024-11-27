@@ -42,7 +42,7 @@ size = Vector2(30.5, 49)
 size = Vector2(23, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6diub"]
-size = Vector2(21, 76)
+size = Vector2(33, 76)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hm4lm"]
 animations = [{
@@ -136,7 +136,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jumping",
-"speed": 9.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -168,7 +168,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 collision_mask = 10
 script = ExtResource("1_s4oga")
 
@@ -200,7 +200,7 @@ shape = SubResource("RectangleShape2D_0fo3c")
 
 [node name="colision" type="CollisionShape2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(55.5, -31)
+position = Vector2(49.5, -31)
 shape = SubResource("RectangleShape2D_6diub")
 
 [node name="camera" type="Camera2D" parent="."]
@@ -214,12 +214,10 @@ editor_draw_limits = true
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 visibility_layer = 10
-position = Vector2(54, -25)
-scale = Vector2(1.87793, 1.70671)
+position = Vector2(52.9531, -20.6926)
+scale = Vector2(1.84522, 1.57211)
 sprite_frames = SubResource("SpriteFrames_hm4lm")
-animation = &"dying"
-frame = 8
-frame_progress = 1.0
+animation = &"jumping"
 
 [node name="jumping_sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("33_msowk")
@@ -232,7 +230,7 @@ wait_time = 0.7
 one_shot = true
 
 [node name="dying_timer" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 2.5
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]
