@@ -117,7 +117,7 @@ script = ExtResource("1_b5jl3")
 [node name="hit_area" type="Area2D" parent="."]
 
 [node name="collision_hit" type="CollisionShape2D" parent="hit_area"]
-position = Vector2(-21, -36)
+position = Vector2(-16, -36)
 shape = SubResource("RectangleShape2D_i3how")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -125,11 +125,12 @@ position = Vector2(0, -29.5)
 shape = SubResource("RectangleShape2D_urecm")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
-position = Vector2(1.19209e-07, -32)
-scale = Vector2(0.679688, 0.755021)
+position = Vector2(0.124991, -28.8434)
+scale = Vector2(0.683594, 0.670844)
 sprite_frames = SubResource("SpriteFrames_wu2rb")
 animation = &"walking"
 autoplay = "walking"
+frame_progress = 0.215336
 flip_h = true
 
 [node name="wall_detector" type="RayCast2D" parent="."]
