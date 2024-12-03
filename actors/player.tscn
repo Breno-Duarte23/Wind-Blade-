@@ -1,13 +1,9 @@
-[gd_scene load_steps=39 format=3 uid="uid://dh27pj8dcn8y7"]
+[gd_scene load_steps=35 format=3 uid="uid://dh27pj8dcn8y7"]
 
 [ext_resource type="Script" path="res://scripts/Yasuke Satoshi.gd" id="1_s4oga"]
 [ext_resource type="Texture2D" uid="uid://b1a3t2rtl42bo" path="res://assets/characters/Yasuke Satoshi/atk1/atk10.png" id="2_4mly4"]
 [ext_resource type="Texture2D" uid="uid://d2qiawcxyfdb1" path="res://assets/characters/Yasuke Satoshi/atk1/atk11.png" id="3_mmwd7"]
 [ext_resource type="Texture2D" uid="uid://b1jm15iyhy1qk" path="res://assets/characters/Yasuke Satoshi/atk1/atk12.png" id="4_i6jm3"]
-[ext_resource type="Texture2D" uid="uid://dq0ftcvfefxoa" path="res://assets/characters/Yasuke Satoshi/atk1/atk13.png" id="5_ghss4"]
-[ext_resource type="Texture2D" uid="uid://begx3pvec2wrj" path="res://assets/characters/Yasuke Satoshi/atk1/atk14.png" id="6_duby5"]
-[ext_resource type="Texture2D" uid="uid://6jvq2hf6rhux" path="res://assets/characters/Yasuke Satoshi/atk1/atk15.png" id="7_51odp"]
-[ext_resource type="Texture2D" uid="uid://bthva2fet3r3t" path="res://assets/characters/Yasuke Satoshi/atk1/atk16.png" id="8_c2tpy"]
 [ext_resource type="Texture2D" uid="uid://duvl8gk34rx2k" path="res://assets/characters/Yasuke Satoshi/jumping/pulando0.png" id="9_1ypxf"]
 [ext_resource type="Texture2D" uid="uid://dinn17ib72xfc" path="res://assets/characters/Yasuke Satoshi/dying/morrendo0.png" id="9_431fy"]
 [ext_resource type="Texture2D" uid="uid://b3bptucdy4rwb" path="res://assets/characters/Yasuke Satoshi/dying/morrendo1.png" id="10_jftqr"]
@@ -55,18 +51,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_i6jm3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_ghss4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_duby5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_51odp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_c2tpy")
 }],
 "loop": true,
 "name": &"attack",
@@ -173,6 +157,7 @@ collision_mask = 10
 script = ExtResource("1_s4oga")
 
 [node name="hitbox" type="Area2D" parent="."]
+visible = false
 collision_layer = 16
 collision_mask = 20
 monitorable = false
@@ -182,6 +167,7 @@ position = Vector2(74.75, -34)
 shape = SubResource("RectangleShape2D_3d72k")
 
 [node name="hitbox2" type="Area2D" parent="."]
+visible = false
 collision_layer = 16
 collision_mask = 20
 monitorable = false
@@ -191,6 +177,7 @@ position = Vector2(33.5, -34.5)
 shape = SubResource("RectangleShape2D_3d72k")
 
 [node name="MobDetector" type="Area2D" parent="."]
+visible = false
 collision_mask = 4
 monitorable = false
 
@@ -200,6 +187,7 @@ shape = SubResource("RectangleShape2D_0fo3c")
 
 [node name="colision" type="CollisionShape2D" parent="."]
 physics_interpolation_mode = 1
+visible = false
 position = Vector2(49.5, -31)
 shape = SubResource("RectangleShape2D_6diub")
 
@@ -214,10 +202,10 @@ editor_draw_limits = true
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 visibility_layer = 10
-position = Vector2(52.9531, -20.6926)
+position = Vector2(68, -26)
 scale = Vector2(1.84522, 1.57211)
 sprite_frames = SubResource("SpriteFrames_hm4lm")
-animation = &"jumping"
+animation = &"attack"
 
 [node name="jumping_sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("33_msowk")
@@ -226,7 +214,7 @@ stream = ExtResource("33_msowk")
 stream = ExtResource("34_k0rtr")
 
 [node name="attack_timer" type="Timer" parent="."]
-wait_time = 0.7
+wait_time = 0.4
 one_shot = true
 
 [node name="dying_timer" type="Timer" parent="."]

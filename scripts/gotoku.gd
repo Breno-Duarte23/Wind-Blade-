@@ -50,7 +50,7 @@ func die() -> void:
 	# Executa a morte do personagem
 	direction = 0
 	texture.play("dying")
-	await get_tree().create_timer(0.3).timeout  # Espera o timeout do timer
+	await get_tree().create_timer(0.25).timeout  # Espera o timeout do timer
 	queue_free()
 
 func attack() -> void:
